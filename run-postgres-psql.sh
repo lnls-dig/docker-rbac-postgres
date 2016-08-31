@@ -15,4 +15,4 @@ RBAC_DOCKER_IMAGE_NAME="$6"
 docker run --name ${RBAC_DOCKER_IMAGE_NAME}-psql --net ${NET_NAME} --dns ${DNS_IP} \
     -e POSTGRES_USER=${POSTGRES_USER} \
     -e POSTGRES_PASSWORD=${POSTGRES_PASSWORD} \
-    -it postgres psql -h ${RBAC_DOCKER_IMAGE_NAME} -U ${POSTGRES_USER}
+    -it postgres psql -h docker-${RBAC_DOCKER_IMAGE_NAME} -U ${POSTGRES_USER}

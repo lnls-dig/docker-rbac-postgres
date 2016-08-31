@@ -18,4 +18,4 @@ LOCAL_POSTGRES_PORT="$9"
 docker run  --name ${RBAC_DOCKER_IMAGE_NAME} --net ${NET_NAME} --dns ${DNS_IP} \
     -p ${LOCAL_POSTGRES_PORT}:${POSTGRES_PORT} -e POSTGRES_USER=${POSTGRES_USER} \
     -e POSTGRES_PASSWORD=${POSTGRES_PASSWORD} \
-    -d --volumes-from ${RBAC_DOCKER_VOLUME} lerwys/${RBAC_DOCKER_IMAGE_NAME}
+    -d --volumes-from ${RBAC_DOCKER_VOLUME} lerwys/docker-${RBAC_DOCKER_IMAGE_NAME}
