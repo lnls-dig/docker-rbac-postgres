@@ -12,15 +12,14 @@ POSTGRES_PASSWORD="rbac"
 RBAC_SERVICE_NAME=auth-services-postgres
 RBAC_DOCKER_IMAGE_NAME=rbac-auth-services-postgres
 RBAC_DOCKER_VOLUME=rbac-auth-services-postgres-volume
+NET_NAME="postgres-rbac"
 
 if [ "${SERVICE}" == "rbac" ]; then
-    NET_NAME="postgres-rbac-auth-services"
     RBAC_SERVICE_NAME=auth-services-postgres
     RBAC_DOCKER_IMAGE_NAME=rbac-auth-services-postgres
     RBAC_DOCKER_VOLUME=rbac-auth-services-postgres-volume
     LOCAL_POSTGRES_PORT=5432
 elif [ "${SERVICE}" == "mgmt" ]; then
-    NET_NAME="postgres-rbac-management-studio"
     RBAC_SERVICE_NAME=management-studio-postgres
     RBAC_DOCKER_IMAGE_NAME=rbac-management-studio-postgres
     RBAC_DOCKER_VOLUME=rbac-management-studio-postgres-volume
