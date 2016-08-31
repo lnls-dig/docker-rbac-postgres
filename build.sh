@@ -13,4 +13,4 @@ OPTNAMESERVER="echo nameserver 10.0.0.71 > /etc/resolv.conf \&\& \\\\"
 sed -e "s|OPTNAMESERVER|${OPTNAMESERVER}|g" \
     Dockerfile.ini > Dockerfile
 
-docker build -t lerwys/${RBAC_DOCKER_IMAGE_NAME} .
+docker build -t lerwys/docker-${RBAC_DOCKER_IMAGE_NAME} .
