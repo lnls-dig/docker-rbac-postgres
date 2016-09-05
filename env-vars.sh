@@ -3,7 +3,8 @@
 SERVICE="$1"
 
 # Default variables
-NET_NAME="postgres-rbac-auth-services"
+#NET_NAME="postgres-rbac-auth-services"
+NET_NAME="dockerrbacauthservicescomposed_postgres-rbac"
 DNS_IP="10.0.0.72"
 POSTGRES_PORT=5432
 LOCAL_POSTGRES_PORT=5432
@@ -12,7 +13,6 @@ POSTGRES_PASSWORD="rbac"
 RBAC_SERVICE_NAME=auth-services-postgres
 RBAC_DOCKER_IMAGE_NAME=rbac-auth-services-postgres
 RBAC_DOCKER_VOLUME=rbac-auth-services-postgres-volume
-NET_NAME="postgres-rbac"
 
 if [ "${SERVICE}" == "rbac" ]; then
     RBAC_SERVICE_NAME=auth-services-postgres
