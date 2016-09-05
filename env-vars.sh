@@ -18,12 +18,12 @@ if [ "${SERVICE}" == "rbac" ]; then
     RBAC_SERVICE_NAME=auth-services-postgres
     RBAC_DOCKER_IMAGE_NAME=rbac-auth-services-postgres
     RBAC_DOCKER_VOLUME=rbac-auth-services-postgres-volume
-    LOCAL_POSTGRES_PORT=5432
+    LOCAL_POSTGRES_PORT=5433
 elif [ "${SERVICE}" == "mgmt" ]; then
     RBAC_SERVICE_NAME=management-studio-postgres
     RBAC_DOCKER_IMAGE_NAME=rbac-management-studio-postgres
     RBAC_DOCKER_VOLUME=rbac-management-studio-postgres-volume
-    LOCAL_POSTGRES_PORT=5433
+    LOCAL_POSTGRES_PORT=5434
 else
     echo "Unsupported service"
     exit 1
