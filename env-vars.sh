@@ -4,7 +4,7 @@ SERVICE="$1"
 
 # Default variables
 #NET_NAME="postgres-rbac-auth-services"
-NET_NAME="dockerrbacauthservicescomposed_postgres-rbac"
+NET_NAME="dockerrbaccomposed_postgres-rbac"
 DNS_IP="10.0.0.72"
 POSTGRES_PORT=5432
 LOCAL_POSTGRES_PORT=5432
