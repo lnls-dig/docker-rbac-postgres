@@ -4,9 +4,9 @@ set -a
 set -e
 set -u
 
-NET_NAME="$1"
-DNS_IP="$2"
-RBAC_DOCKER_VOLUME="$3"
+SERVICE="$1"
+
+. ./env-vars.sh ${SERVICE}
 
 # Create volume container
 docker create -v /var/lib/postgresql/data --name ${RBAC_DOCKER_VOLUME} \
