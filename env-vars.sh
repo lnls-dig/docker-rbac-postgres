@@ -16,7 +16,7 @@ RBAC_DOCKER_RUN_NAME=rbac-auth-services-postgres
 RBAC_DOCKER_RUN_NAME_PSQL=${RBAC_DOCKER_RUN_NAME}-psql
 RBAC_DOCKER_IMAGE_NAME=docker-${RBAC_DOCKER_RUN_NAME}
 
-RBAC_DOCKER_VOLUME=rbac-auth-services-postgres-volume
+RBAC_DOCKER_VOLUME=dockerrbaccomposed_rbac-auth-services-postgres-volume
 
 if [ "${SERVICE}" == "rbac" ]; then
     RBAC_SERVICE_NAME=auth-services-postgres
@@ -24,7 +24,7 @@ if [ "${SERVICE}" == "rbac" ]; then
     RBAC_DOCKER_RUN_NAME=rbac-auth-services-postgres
     RBAC_DOCKER_IMAGE_NAME=docker-${RBAC_DOCKER_RUN_NAME}
     RBAC_DOCKER_RUN_NAME_PSQL=${RBAC_DOCKER_RUN_NAME}-psql
-    RBAC_DOCKER_VOLUME=rbac-auth-services-postgres-volume
+    RBAC_DOCKER_VOLUME=dockerrbaccomposed_rbac-auth-services-postgres-volume
     LOCAL_POSTGRES_PORT=5433
 else
     echo "Unsupported service"
